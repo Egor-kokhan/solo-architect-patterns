@@ -2,11 +2,10 @@ package com.otus.spaceBattle.runner;
 
 import com.otus.spaceBattle.command.Command;
 import com.otus.spaceBattle.exceptionHandler.MainExceptionHandler;
-
-import java.util.Queue;
-
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+
+import java.util.Queue;
 
 @RequiredArgsConstructor
 public class CommandRunner {

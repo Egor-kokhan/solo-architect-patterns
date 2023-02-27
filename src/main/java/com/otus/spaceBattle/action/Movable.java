@@ -4,9 +4,9 @@ import com.otus.spaceBattle.dto.Coords;
 
 public interface Movable {
 
-  Coords getPosition();
+    Coords getPosition();
 
-  void setPosition(Coords newValue);
+    void setPosition(Coords newValue);
 
-  Coords getVelocity();
+    Coords getVelocity();
 }

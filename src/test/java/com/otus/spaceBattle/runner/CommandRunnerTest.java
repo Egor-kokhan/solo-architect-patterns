@@ -2,16 +2,15 @@ package com.otus.spaceBattle.runner;
 
 import com.otus.spaceBattle.command.Command;
 import com.otus.spaceBattle.exceptionHandler.MainExceptionHandler;
-
-import java.util.Arrays;
-import java.util.LinkedList;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.Arrays;
+import java.util.LinkedList;
 
 @ExtendWith(MockitoExtension.class)
 class CommandRunnerTest {

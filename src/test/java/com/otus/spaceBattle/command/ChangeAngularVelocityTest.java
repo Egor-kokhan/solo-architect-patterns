@@ -19,12 +19,12 @@ public class ChangeAngularVelocityTest {
     private RotationVelocityChange rotationVelocityChange;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         rotationVelocityChange = new RotationVelocityChange(rotationVelocityChangeable);
     }
 
     @Test
-    void changeRotationSpeed(){
+    void changeRotationSpeed() {
 
         Mockito.when(rotationVelocityChangeable.getAngularVelocity()).thenReturn(STARTED_ROTATION_VELOCITY);
         Mockito.when(rotationVelocityChangeable.getAngularVelocityChange()).thenReturn(CHANGE_ROTATION_VELOCITY);
