@@ -5,10 +5,11 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class RotationVelocityChange {
+public class RotationVelocityChange implements Command {
 
     private final @NonNull RotationVelocityChangeable rotationVelocityChangeable;
 
+    @Override
     public void execute() {
         int angularVelocity = rotationVelocityChangeable.getAngularVelocity();
         int angularVelocityChange = rotationVelocityChangeable.getAngularVelocityChange();
