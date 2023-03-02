@@ -7,10 +7,9 @@ import lombok.RequiredArgsConstructor;
 import java.util.Objects;
 
 @RequiredArgsConstructor
-public class Rotate implements Command {
+public class Rotate {
     private final @NonNull Rotatable rotatable;
 
-    @Override
     public void execute() {
         rotatableDirectionNullCheck();
         rotatable.setDirection(rotatable.getDirection().next(rotatable.getAngularVelocity()));

@@ -3,14 +3,13 @@ package com.otus.spaceBattle.command;
 import com.otus.spaceBattle.action.Movable;
 import com.otus.spaceBattle.dto.Coords;
 
-public class Move implements Command {
+public class Move {
     private final Movable movable;
 
     public Move(Movable movable) {
         this.movable = movable;
     }
 
-    @Override
     public void execute() {
         Coords position = movable.getPosition();
         Coords velocity = movable.getVelocity();
