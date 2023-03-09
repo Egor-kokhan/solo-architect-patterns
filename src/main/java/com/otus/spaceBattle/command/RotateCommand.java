@@ -1,5 +1,6 @@
 package com.otus.spaceBattle.command;
 
+import com.otus.spaceBattle.action.Command;
 import com.otus.spaceBattle.action.Rotatable;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -7,9 +8,10 @@ import lombok.RequiredArgsConstructor;
 import java.util.Objects;
 
 @RequiredArgsConstructor
-public class Rotate {
+public class RotateCommand implements Command {
     private final @NonNull Rotatable rotatable;
 
+    @Override
     public void execute() {
         rotatableDirectionNullCheck();
         rotatable.setDirection(rotatable.getDirection().next(rotatable.getAngularVelocity()));

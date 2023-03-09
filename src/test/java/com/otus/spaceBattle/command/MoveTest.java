@@ -16,12 +16,12 @@ class MoveTest {
     @Mock
     private Movable movable;
 
-    private Move move;
+    private MoveCommand move;
 
 
     @BeforeEach
     public void setup() {
-        move = new Move(movable);
+        move = new MoveCommand(movable);
     }
 
     @Test
