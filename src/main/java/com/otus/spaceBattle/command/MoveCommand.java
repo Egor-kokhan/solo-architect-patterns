@@ -3,13 +3,11 @@ package com.otus.spaceBattle.command;
 import com.otus.spaceBattle.action.Command;
 import com.otus.spaceBattle.action.Movable;
 import com.otus.spaceBattle.dto.Coords;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public class MoveCommand implements Command {
     private final Movable movable;
-
-    public MoveCommand(Movable movable) {
-        this.movable = movable;
-    }
 
     @Override
     public void execute() {

@@ -3,7 +3,7 @@ package com.otus.spaceBattle.exceptionHandler;
 import com.otus.spaceBattle.action.Command;
 import com.otus.spaceBattle.command.MoveCommand;
 import com.otus.spaceBattle.exception.FirstRepeatException;
-import com.otus.spaceBattle.exception.NotEnoughFuelOtusException;
+import com.otus.spaceBattle.exception.NotEnoughFuelException;
 import com.otus.spaceBattle.exception.SecondRepeatException;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -40,7 +40,7 @@ public class OtusExceptionHandlerImpl implements OtusExceptionHandler {
         excHandlers.put(Exception.class, List.of(new BaseOtusExceptionHandler()));
         excHandlers.put(FirstRepeatException.class, List.of(new SecondRepeaterOtusExceptionHandler()));
         excHandlers.put(SecondRepeatException.class, List.of(new LogHandler()));
-        commandAndExcHandlers.put(Pair.of(NotEnoughFuelOtusException.class, MoveCommand.class), List.of(new NotEnoughFuelForMovingOtusExceptionHandler()));
+        commandAndExcHandlers.put(Pair.of(NotEnoughFuelException.class, MoveCommand.class), List.of(new NotEnoughFuelForMovingOtusExceptionHandler()));
     }
 
 
